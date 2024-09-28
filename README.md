@@ -24,7 +24,7 @@ O objetivo é criar um sistema para gerenciar projetos de energia solar, permiti
 2. Importe o projeto para sua IDE preferida (Eclipse, IntelliJ).
 3. Execute o arquivo `Main.java` para iniciar a aplicação.
 
-## Autores:
+## Autoras:
 
 - [Lais Santos] (https://github.com/fudelasq)
 - [Fernanda Santos] (https://github.com/Fernandadsantos)
