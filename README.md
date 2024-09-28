@@ -14,7 +14,7 @@ O objetivo é criar um sistema para gerenciar projetos de energia solar, permiti
 ## Tecnologias Utilizadas
 - Java 
 - Swing (para interface gráfica)
-- JSON/CSV (para armazenamento de dados)
+- JSON (para armazenamento de dados)
 
 ## Como Executar o Projeto
 1. Clone este repositório:
