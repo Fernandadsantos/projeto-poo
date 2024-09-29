@@ -57,15 +57,6 @@ public class Cliente {
     	return todosOrcamentos.remove(orcamento);
     }
     
-    public Orcamento buscarOrcamentoPorId(int id) {
-    	for (Orcamento orcamento : todosOrcamentos) {
-    		if (orcamento.getID() == id) {
-    			return orcamento;
-    		}
-    	}
-    	return null;
-    }
-    
     // Métodos referentes ao gerenciamento de projetos do cliente
     public boolean adicionarProjeto(Projeto projeto) {
     	return todosProjetos.add(projeto);
@@ -84,19 +75,16 @@ public class Cliente {
     }
     
     // Método para permitir ao cliente decidir se aprova ou não um orçamento
-    public void decidirOrcamento(int idOrcamento, boolean aprovado) {
-    	Orcamento orcamento = buscarOrcamentoPorId(idOrcamento);
-    	
-    	if (orcamento != null) {
+    public void decidirOrcamento(Orcamento orcamento, boolean aprovado) {
+    
     		if (aprovado) {
     			orcamento.aprovar();
     			//TODO: adicionar a confirmação na interface gráfica
-    			System.out.println("Orcamento #" + idOrcamento + "aprovado!");
+    			System.out.println("Orcamento #" + orcamento.getID() + "aprovado!");
     		} else {
     			orcamento.reprovar();
-    			System.out.println("Orcamento #" + idOrcamento + "reprovado!");
+    			System.out.println("Orcamento #" + orcamento.getID() + "reprovado!");
     		}
-    	}
     }
     
     // Getters e Setters dos atributos

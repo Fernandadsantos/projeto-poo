@@ -31,7 +31,12 @@ public class Projeto {
 	
 	private int calcularQuantidadePaineis(int consumo, Municipio municipio, PlacaSolar placa) {
 		int quantidade = (consumo) / (municipio.getIrradiacaoAnual() * placa.getCapacidade() * 30); 
-		return quantidade;
+		
+		if (quantidade > 0) {
+			return quantidade;			
+		} else {
+			return 1;
+		}
 	}
 	
 	// Métodos getters e setters

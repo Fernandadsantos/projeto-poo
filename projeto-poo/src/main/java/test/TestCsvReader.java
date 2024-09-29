@@ -6,13 +6,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import model.Municipio;
-import util.CsvReader;
+import util.CsvUtil;
 
 class TestCsvReader {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		CsvReader csvReader = new CsvReader();
+		CsvUtil csvReader = new CsvUtil();
 	}
 
 	@Test

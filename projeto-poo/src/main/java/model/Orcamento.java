@@ -64,6 +64,16 @@ public class Orcamento {
 		return precoFinal;
 	}
 	
+	// Método para buscar um orçamento pelo ID
+	   public Orcamento buscarOrcamentoPorId(int id, Cliente cliente) {
+	    	for (Orcamento orcamento : cliente.getTodosOrcamentos()) {
+	    		if (orcamento.getID() == id) {
+	    			return orcamento;
+	    		}
+	    	}
+	    	return null;
+	    }
+	
 	// Métodos getters e setters
 	public int getID() {
 		return ID;

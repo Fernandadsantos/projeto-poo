@@ -13,7 +13,7 @@ import model.Municipio;
  *
  */
 
-public class CsvReader {
+public class CsvUtil {
 	
 	private final String caminho = "src/main/java/data/base_irradiacao.csv";
 
