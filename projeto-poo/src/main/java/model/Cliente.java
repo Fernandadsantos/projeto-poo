@@ -7,6 +7,8 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import service.ClienteService;
+
 /**
  * Classe "Cliente", que modela os objetos do tipo cliente e suas informações
  * - Contém o seu método construtor, seus getters e setters e principais métodos:
@@ -29,9 +31,6 @@ public class Cliente {
     private List<Orcamento> todosOrcamentos = new ArrayList<>();
     private List<Projeto> todosProjetos = new ArrayList<>();
     
-    // Lista estática que armazena todos os clientes cadastrados na plataforma
-    private static List<Cliente> todosClientes = new ArrayList<>();
-    
     // Construtor
     public Cliente(String nome, String endereco, String telefone, String email, String senha) {
     	this.nome = nome;
@@ -39,7 +38,8 @@ public class Cliente {
     	this.telefone = telefone;
     	this.email = email;
     	this.senha = senha;
-    	todosClientes.add(this);
+    	this.todosOrcamentos = new ArrayList<>();
+    	this.todosProjetos = new ArrayList<>();
     }
 
 	// Método para checar se a senha inserida na tela de login é a mesma senha cadastrada
@@ -134,13 +134,5 @@ public class Cliente {
 	public void setTodosProjetos(List<Projeto> todosProjetos) {
 		this.todosProjetos = todosProjetos;
 	}
-	
-	public static List<Cliente> getTodosClientes() {
-		return todosClientes;
-	}
 
-	public static void setTodosClientes(List<Cliente> todosClientes) {
-		Cliente.todosClientes = todosClientes;
-	}	
-    
 }
