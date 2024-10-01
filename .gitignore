@@ -1,0 +1,47 @@
+# Arquivos do Eclipse
+.metadata/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+replay_pid.txt
+
+# Diretórios de projeto Eclipse
+*.project
+*.classpath
+.settings/
+
+# Diretórios de build e output
+bin/
+target/
+out/
+
+# Arquivos de compilação Java
+*.class
+
+# Arquivos gerados por IDEs
+*.iml
+.idea/
+.vscode/
+
+# Logs e relatórios de erros
+*.log
+hs_err_pid*
+
+# Dependências baixadas (Maven/Gradle)
+.mvn/
+.gradle/
+build/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.temp
+*.tmp
+
+# Arquivos de backup
+*.bak
+*.old
