@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package model;
+package moduloEmpresa.modelEmpresa;
 
 /**
  * Classe que herda da classe Equipamento, e permite a criação de modelos diferentes de inversores
@@ -15,6 +11,7 @@ public class Inversor extends Equipamento {
 	// Construtor do tipo Inversor
 	public Inversor(Fabricante fabricante, double valor, int potencia) {
 		super(fabricante, valor);
+                this.tipo = TipoEquipamento.INVERSOR;
 		this.potencia = potencia;
 	}
 

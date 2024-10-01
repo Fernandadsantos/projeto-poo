@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package model;
+package moduloEmpresa.modelEmpresa;
 
 /**
  * Classe abstrata Equipamento, que não será instanciada pois apenas servirá como referência para os tipos de equipamento
@@ -12,6 +8,7 @@ package model;
 public abstract class Equipamento {
     Fabricante fabricante;
     double valor;
+    TipoEquipamento tipo;
     
     // Construtor vazio, pois será instanciada apenas pelas classes herdeiras
     public Equipamento(Fabricante fabricante, double valor) {
@@ -25,7 +22,7 @@ public abstract class Equipamento {
 	public Fabricante getFabricante() {
 		return fabricante;
 	}
-	public void setFacricante(Fabricante fabricante) {
+	public void setFabricante(Fabricante fabricante) {
 		this.fabricante = fabricante;
 	}
 	public double getValor() {
@@ -34,4 +31,9 @@ public abstract class Equipamento {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
+    
+    public enum TipoEquipamento {
+        INVERSOR,
+        PLACASOLAR;
+    }
 }

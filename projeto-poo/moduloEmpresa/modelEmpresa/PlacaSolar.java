@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package model;
+package moduloEmpresa.modelEmpresa;
 
 /**
  * Classe que herda da classe Equipamento, e permite a criação de modelos diferentes de placas solares
@@ -17,6 +13,7 @@ public class PlacaSolar extends Equipamento {
     // Construtor do tipo PlacaSolar
     public PlacaSolar(Fabricante fabricante, double valor, int capacidade) {
     	super(fabricante, valor);
+        this.tipo = TipoEquipamento.PLACASOLAR;
     	this.capacidade = capacidade;
     }
 

@@ -1,8 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package model;
+package moduloCliente.modelCliente;
+
+import moduloEmpresa.modelEmpresa.Inversor;
+import moduloEmpresa.modelEmpresa.Municipio;
+import moduloEmpresa.modelEmpresa.PlacaSolar;
 
 /**
  * Classe "Projeto", que modela os objetos do tipo proejto  e suas informações
@@ -15,20 +15,29 @@ public class Projeto {
 	int quantidadePlacas;
 	int quantidadeInversores;
 	int consumoMensalEnergia;
+        int id;
+        
 	PlacaSolar modeloPlaca;
 	Inversor modeloInversor;
 	Municipio municipio;
-	
+        Orcamento orcamento;
+
+	// Contador estático para controlar a quantidade de projetos
+        private static int counter = 0;
+        
 	// Método construtor do tipo Projeto
 	public Projeto(PlacaSolar placa, Inversor inversor, Municipio municipio, int consumoMensal) {
 		this.modeloPlaca = placa;
 		this.modeloInversor = inversor;
 		this.municipio = municipio;
 		this.consumoMensalEnergia = consumoMensal;
-		this.quantidadePlacas = calcularQuantidadePaineis(consumoMensal, municipio, placa);
+		this.quantidadePlacas = 0;
 		this.quantidadeInversores = 0; // TODO: Ajustar o cálculo da quantidade de inversores
+                this.orcamento = new Orcamento(this);
+                this.id = ++counter;
 	}
 	
+        // Método para calcular a quantidade de painéis
 	private int calcularQuantidadePaineis(int consumo, Municipio municipio, PlacaSolar placa) {
 		int quantidade = (consumo) / (municipio.getIrradiacaoAnual() * placa.getCapacidade() * 30); 
 		
@@ -40,6 +49,14 @@ public class Projeto {
 	}
 	
 	// Métodos getters e setters
+        public void setQuantidadePlacas(int quantidadePlacas) {
+            this.quantidadePlacas = quantidadePlacas;
+        }
+        
+        public void setQuantidadeInversores(int quantidadeInversores) {
+            this.quantidadeInversores = quantidadeInversores;
+        }
+        
 	public int getQuantidadePlacas() {
 		return quantidadePlacas;
 	}
@@ -58,5 +75,13 @@ public class Projeto {
 	public Inversor getModeloInversor() {
 		return modeloInversor;
 	}
+        
+        public Orcamento getOrcamento() {
+                return orcamento;
+        }
 	
+        public int getId() {
+                return id;
+        }
+        
 }
