@@ -11,6 +11,7 @@ public class Inversor extends Equipamento {
 	// Construtor do tipo Inversor
 	public Inversor(Fabricante fabricante, double valor, int potencia) {
 		super(fabricante, valor);
+                this.tipo = TipoEquipamento.INVERSOR;
 		this.potencia = potencia;
 	}
 

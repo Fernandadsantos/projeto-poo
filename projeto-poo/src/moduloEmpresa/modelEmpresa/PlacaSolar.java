@@ -13,6 +13,7 @@ public class PlacaSolar extends Equipamento {
     // Construtor do tipo PlacaSolar
     public PlacaSolar(Fabricante fabricante, double valor, int capacidade) {
     	super(fabricante, valor);
+        this.tipo = TipoEquipamento.PLACASOLAR;
     	this.capacidade = capacidade;
     }
 

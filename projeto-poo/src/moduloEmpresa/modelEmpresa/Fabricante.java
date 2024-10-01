@@ -10,13 +10,9 @@ import java.util.List;
 public class Fabricante {
     private String nome;
     
-    // Lista estática que armazena todos os fabricantes de equipamentos
-    private static List<Fabricante> todosFabricantes = new ArrayList<>();
-    
     // Construtor
     public Fabricante(String nome) {
     	this.nome = nome;
-    	todosFabricantes.add(this);
     }
     
     // Métodos getters e setters
@@ -26,13 +22,5 @@ public class Fabricante {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public static List<Fabricante> getTodosFabricantes() {
-		return todosFabricantes;
-	}
-
-	public static void setTodosFabricantes(List<Fabricante> todosFabricantes) {
-		Fabricante.todosFabricantes = todosFabricantes;
 	}
 }
