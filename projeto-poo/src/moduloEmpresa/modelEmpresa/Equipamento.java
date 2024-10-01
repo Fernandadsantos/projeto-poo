@@ -8,7 +8,6 @@ package moduloEmpresa.modelEmpresa;
 public abstract class Equipamento {
     Fabricante fabricante;
     double valor;
-    TipoEquipamento tipo;
     
     // Construtor vazio, pois será instanciada apenas pelas classes herdeiras
     public Equipamento(Fabricante fabricante, double valor) {
@@ -22,7 +21,7 @@ public abstract class Equipamento {
 	public Fabricante getFabricante() {
 		return fabricante;
 	}
-	public void setFabricante(Fabricante fabricante) {
+	public void setFacricante(Fabricante fabricante) {
 		this.fabricante = fabricante;
 	}
 	public double getValor() {
@@ -31,9 +30,4 @@ public abstract class Equipamento {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-    
-    public enum TipoEquipamento {
-        INVERSOR,
-        PLACASOLAR;
-    }
 }

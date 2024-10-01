@@ -19,6 +19,7 @@ package moduloCliente.modelCliente;
  * @author fudelasq
  */
 public class Orcamento {
+	private int ID;
 	private Status status;
 	private double valor;
 	
@@ -27,11 +28,13 @@ public class Orcamento {
 	private static final double custoEquipamentos = 250.0;
 	private static final double margemLucro = 1.75; // Para calcular, será considerado 75% de margem de lucro
 	
+	
 	// Construtor
 	// Ao instanciar um objeto do tipo orçamento, o status automaticamente é definido como PENDENTE e só será alterado por meio 
 	// de uma ação do cliente
-	public Orcamento(Projeto projeto) {
-		this.valor = 0;
+	public Orcamento(int ID, Projeto projeto) {
+		this.ID = ID;
+		this.valor = calcularOrcamento(projeto);
 		this.status = Status.PENDENTE;
 	}
 	
@@ -58,7 +61,26 @@ public class Orcamento {
 		return precoFinal;
 	}
 	
+	// Método para buscar um orçamento pelo ID
+	   public Orcamento buscarOrcamentoPorId(int id, Cliente cliente) {
+	    	for (Orcamento orcamento : cliente.getTodosOrcamentos()) {
+	    		if (orcamento.getID() == id) {
+	    			return orcamento;
+	    		}
+	    	}
+	    	return null;
+	    }
+	
 	// Métodos getters e setters
+	public int getID() {
+		return ID;
+	}
+
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
 
 	public Status getStatus() {
 		return status;
