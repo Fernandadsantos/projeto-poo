@@ -12,15 +12,12 @@ import moduloEmpresa.modelEmpresa.PlacaSolar;
  
 /* Classe de serviço que encapsula e centraliza a prestação de serviços voltados ao cliente. 
 *  Seus principais métodos são:
-    - Cadastrar fabricantes na base de dados, realizando as devidas validações
-*   - Cadastrar equipamentos na base de dados, realizando as devidas validações
-*   - Buscar fabricantes e equipamentos cadastrados na base de dados
-*   - Verificar se existem projetos pendentes de dimensionamento
-*   - Realizar o dimensionamento dos projetos solicitados pelos clientes
-*   - Verificar se o usuário logado no sistema é um funcionário
+*   - Buscar um cliente na base de dados
+*   - Cadastrar um cliente na base de dados 
+*   - Solicitar um projeto (deve ser usada quando o cliente solicitar um projeto) 
+*   - Aprovar ou recusar um orçamento feito pela empresa
+*
 */
-
-
 
 public class ClienteService {    
     // Método Singleton garantindo que existirá apenas uma instância do serviço    
