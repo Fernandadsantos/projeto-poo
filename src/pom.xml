@@ -12,4 +12,12 @@
         <maven.compiler.target>21</maven.compiler.target>
         <exec.mainClass>com.mycompany.projeto.poo.ProjetoPoo</exec.mainClass>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+    </dependencies>
+
 </project>
